@@ -9,9 +9,11 @@ body {
 }
 
 .nav {
+  height: 10vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 1em 2em;
   border-bottom: 0.2em solid #a9a9a9;
 }
@@ -32,4 +34,24 @@ body {
 
 .nav__buttons_button img {
   height: 1em;
+}
+
+main {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_button {
+  width: 8em;
+  height: 4em;
+  border-radius: 0.5em;
+  font-size: 1em;
+  background-color: #e0e0e0;
+}
+
+.main_button:hover {
+  cursor: pointer;
+  background-color: #d2d2d2;
 }
