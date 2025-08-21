@@ -89,9 +89,15 @@ main {
   padding: 0.2em;
 }
 
-.registration > input {
+#registration_btn {
   width: 12em;
   height: 2.5em;
   border-radius: 0.3em;
   font-size: 1.2em;
+  background-color: #e0e0e0;
+}
+
+#registration_btn:hover {
+  cursor: pointer;
+  background-color: #d2d2d2;
 }
