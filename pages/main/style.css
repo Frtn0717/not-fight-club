@@ -1,0 +1,12 @@
+.main_button {
+  width: 8em;
+  height: 4em;
+  border-radius: 0.5em;
+  font-size: 1em;
+  background-color: #e0e0e0;
+}
+
+.main_button:hover {
+  cursor: pointer;
+  background-color: #d2d2d2;
+}
