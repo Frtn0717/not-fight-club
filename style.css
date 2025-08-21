@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +8,10 @@
 
 body {
   background-color: #e0e0e0;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .nav {
@@ -54,4 +60,38 @@ main {
 .main_button:hover {
   cursor: pointer;
   background-color: #d2d2d2;
+}
+
+.registration {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.registration__input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.registration__input label {
+  font-size: 1.5em;
+  margin-bottom: 0.2em;
+}
+
+.registration__input input {
+  font-size: 1.5em;
+  border-radius: 0.2em;
+  padding: 0.2em;
+}
+
+.registration > input {
+  width: 12em;
+  height: 2.5em;
+  border-radius: 0.3em;
+  font-size: 1.2em;
 }
