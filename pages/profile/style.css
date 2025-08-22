@@ -1,0 +1,33 @@
+main {
+  padding: 2em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.avatar {
+  width: 20em;
+  height: 30em;
+}
+
+.avatar > img {
+  max-width: 20em;
+  max-height: 30em;
+  background-size: cover;
+}
+
+.wins {
+  color: green;
+}
+
+.loses {
+  color: red;
+}

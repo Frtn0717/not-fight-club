@@ -3,24 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/pages/profile/style.css" />
     <title>Profile</title>
   </head>
   <body>
     <nav class="nav">
-      <p class="nav__title">Main</p>
+      <p class="nav__title">Character</p>
       <div class="nav__buttons">
         <ul class="nav__buttons_list">
           <li>
             <a href="/pages/main/main.html" class="nav__buttons_button"
-              ><img src="../../assets/icons/home.svg" alt="Home" title="Home"
+              ><img src="/assets/icons/home.svg" alt="Home" title="Home"
             /></a>
           </li>
           <li>
             <a href="/pages/profile/profile.html" class="nav__buttons_button"
               ><img
-                src="../../assets/icons/profile.svg"
+                src="/assets/icons/profile.svg"
                 alt="Profile"
                 title="Profile"
                 id="profile_button"
@@ -29,7 +29,7 @@
           <li>
             <a href="/pages/settings/settings.html" class="nav__buttons_button"
               ><img
-                src="../../assets/icons/settings.svg"
+                src="/assets/icons/settings.svg"
                 alt="Settings"
                 title="Settings"
                 id="settings_button"
@@ -39,7 +39,14 @@
       </div>
     </nav>
     <main>
-      <h1>Profile</h1>
+      <div class="info">
+        <div class="avatar">
+          <img src="/assets/avatars/player/human.png" alt="player" />
+        </div>
+        <div class="statistics">
+          <h3>Statistics:</h3>
+        </div>
+      </div>
     </main>
     <script type="module" src="/pages/profile/script.js" defer />
   </body>
