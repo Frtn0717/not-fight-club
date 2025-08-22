@@ -1,4 +1,4 @@
-const isUserRegistered = localStorage.getItem("userName");
+const isUserRegistered = localStorage.getItem("player/name");
 
 export const redirect = (page) => {
   switch (page) {
