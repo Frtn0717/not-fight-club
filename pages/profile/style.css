@@ -33,9 +33,6 @@ main {
   position: absolute;
   top: 0.5em;
   left: 0.5em;
-}
-
-.avatar__edit_btn:hover {
   cursor: pointer;
 }
 
@@ -71,9 +68,6 @@ main {
 .close-button {
   width: 2em;
   height: 2em;
-}
-
-.close-button:hover {
   cursor: pointer;
 }
 
