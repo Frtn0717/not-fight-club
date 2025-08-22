@@ -5,6 +5,7 @@ main {
   align-items: flex-start;
   flex-direction: column;
   gap: 1em;
+  position: relative;
 }
 
 .info {
@@ -15,8 +16,8 @@ main {
 }
 
 .avatar {
-  width: 20em;
   height: 30em;
+  padding: 1em;
   position: relative;
   border: 1px solid #d2d2d2;
   border-radius: 1em;
@@ -49,4 +50,34 @@ main {
 
 .loses {
   color: red;
+}
+
+.alt_avatars_container {
+  height: 30vh;
+  padding: 1em;
+  display: flex;
+  position: absolute;
+  top: 15em;
+  left: 25em;
+  gap: 2em;
+  border: 1px solid #d2d2d2;
+  border-radius: 1em;
+}
+
+.hide {
+  display: none;
+}
+
+.close-button {
+  width: 2em;
+  height: 2em;
+}
+
+.close-button:hover {
+  cursor: pointer;
+}
+
+.close-button-icon {
+  width: 2em;
+  height: 2em;
 }
