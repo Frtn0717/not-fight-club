@@ -1,0 +1,121 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2em;
+}
+
+.battle-field {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  border: 1px solid #d2d2d2;
+}
+
+.player > img {
+  max-width: 15em;
+  max-height: 20em;
+  background-size: cover;
+}
+
+.player-health-bar {
+  width: 100%;
+  height: 1em;
+  display: flex;
+  position: relative;
+}
+
+.player-total-health {
+  width: 100%;
+  height: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #a0a0a0;
+}
+
+.player-remaining-health {
+  width: 100%;
+  height: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #25d415;
+}
+
+.player-health-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+
+.fight {
+  display: flex;
+  flex-direction: column;
+  background-color: pink;
+}
+
+.enemy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  border: 1px solid #d2d2d2;
+}
+
+.enemy > img {
+  max-width: 15em;
+  max-height: 20em;
+  background-size: cover;
+}
+
+.enemy-health-bar {
+  width: 100%;
+  height: 1em;
+  display: flex;
+  position: relative;
+}
+
+.enemy-total-health {
+  width: 100%;
+  height: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #a0a0a0;
+}
+
+.enemy-remaining-health {
+  width: 100%;
+  height: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #25d415;
+}
+
+.enemy-health-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+
+.log {
+  display: flex;
+  flex-direction: column;
+}

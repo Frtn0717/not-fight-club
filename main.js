@@ -1,4 +1,5 @@
 const isUserRegistered = localStorage.getItem("player/name");
+const isFightBegun = localStorage.getItem("isFightBegun");
 
 export const redirect = (page) => {
   switch (page) {
@@ -26,3 +27,5 @@ if (
 ) {
   redirect("registration");
 }
+
+if (isUserRegistered && isFightBegun) redirect("battle");

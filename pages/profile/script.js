@@ -68,8 +68,13 @@ closeButton.addEventListener("click", () => {
 });
 
 avatarsContainer.addEventListener("click", (e) => {
+  console.log(e.target);
   e.target.name && localStorage.setItem("player/avatar", e.target.name);
   avatarsContainer.classList.remove("alt_avatars_container");
   avatarsContainer.classList.add("hide");
-  avatarImg.setAttribute("src", `/assets/avatars/player/${e.target.name}.png`);
+  e.target.name &&
+    avatarImg.setAttribute(
+      "src",
+      `/assets/avatars/player/${e.target.name}.png`
+    );
 });
