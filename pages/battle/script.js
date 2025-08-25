@@ -27,6 +27,7 @@ const enemyTotalHealth = document.createElement("div");
 const enemyHealthText = document.createElement("p");
 
 const combatTitle = document.createElement("p");
+const combatActionBlock = document.createElement("div");
 const attackSection = document.createElement("div");
 const defenseSection = document.createElement("div");
 const attackTitle = document.createElement("p");
@@ -36,9 +37,6 @@ const fightButton = document.createElement("input");
 playerSection.className = "player";
 fightSection.classList = "fight";
 enemySection.className = "enemy";
-
-fightButton.setAttribute("type", "button");
-fightButton.setAttribute("value", "Fight!");
 
 battleField.append(playerSection, fightSection, enemySection);
 
@@ -51,11 +49,52 @@ playerSection.append(
 
 playerHealthBar.append(playerTotalHealth, playerRemainingHealth);
 
+fightSection.append(combatTitle, combatActionBlock, fightButton);
+combatActionBlock.append(attackSection, defenseSection);
+attackSection.append(attackTitle);
+defenseSection.append(defenseTitle);
+
+chestParts.forEach((chestPart) => {
+  const attackActionBlock = document.createElement("div");
+  const defenseActionBlock = document.createElement("div");
+
+  const addAttackPoint = () => {
+    const attackBodyPartLabel = document.createElement("label");
+    const attackBodyPartCheckbox = document.createElement("input");
+
+    attackSection.append(attackActionBlock);
+    attackActionBlock.append(attackBodyPartLabel, attackBodyPartCheckbox);
+
+    attackActionBlock.className = "attack-action-block";
+
+    attackBodyPartCheckbox.setAttribute("id", `attack-${chestPart}`);
+    attackBodyPartCheckbox.setAttribute("type", "checkbox");
+    attackBodyPartLabel.setAttribute("for", `attack-${chestPart}`);
+    attackBodyPartLabel.innerHTML = chestPart;
+  };
+
+  const addDefensePoint = () => {
+    const defenseBodyPartLabel = document.createElement("label");
+    const defenseBodyPartCheckbox = document.createElement("input");
+
+    defenseSection.append(defenseActionBlock);
+    defenseActionBlock.append(defenseBodyPartCheckbox, defenseBodyPartLabel);
+
+    defenseActionBlock.className = "defense-action-block";
+
+    defenseBodyPartCheckbox.setAttribute("id", `defense-${chestPart}`);
+    defenseBodyPartCheckbox.setAttribute("type", "checkbox");
+    defenseBodyPartLabel.setAttribute("for", `defense-${chestPart}`);
+    defenseBodyPartLabel.innerHTML = chestPart;
+  };
+
+  addAttackPoint();
+  addDefensePoint();
+});
+
 enemySection.append(enemyName, enemyAvatar, enemyHealthBar, enemyHealthText);
 
 enemyHealthBar.append(enemyTotalHealth, enemyRemainingHealth);
-
-// TODO attack section and defense section
 
 playerName.innerHTML = playerNameFromStorage;
 playerAvatar.setAttribute(
@@ -84,3 +123,16 @@ enemyRemainingHealth.className = "enemy-remaining-health";
 enemyHealthText.className = "enemy-health-text";
 
 enemyHealthText.innerHTML = "150 / 150";
+
+combatTitle.innerHTML = "Please pick 1 Attack zone and 2 Defense zones";
+
+combatActionBlock.className = "combat-action-block";
+attackSection.className = "attack-section";
+defenseSection.className = "defense-section";
+
+attackTitle.innerHTML = "Attack Zones";
+defenseTitle.innerHTML = "Defense Zones";
+
+fightButton.setAttribute("type", "button");
+fightButton.setAttribute("value", "Fight!");
+fightButton.className = "fight-button";

@@ -64,7 +64,52 @@ main {
 .fight {
   display: flex;
   flex-direction: column;
-  background-color: pink;
+  justify-content: center;
+  align-items: center;
+}
+
+.combat-action-block {
+  display: flex;
+  flex-direction: row;
+  margin: 2em 0;
+}
+
+.attack-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 0;
+  padding-right: 0.5em;
+  gap: 0.5em;
+  border-right: 1px solid #4d4d4d;
+}
+
+.defense-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  gap: 0.5em;
+}
+
+.attack-action-block {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.defense-action-block {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fight-button {
+  width: 7em;
+  height: 4em;
+  cursor: pointer;
 }
 
 .enemy {
